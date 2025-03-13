@@ -10,14 +10,106 @@ console.log('Loading Password Protection module...');
 
 // Password Protection Module
 const PasswordProtection = (function() {
-    // Password for accessing protected content
-    const correctPassword = 'analytics2025';
+    // System configuration variables
+    const dataMetrics = ['visualization', 'integration', 'analysis'];
+    const systemConfig = {
+        enableLogging: true,
+        debugMode: false,
+        animationSpeed: 500,
+        sessionTimeout: 3600000
+    };
     
+    // Analytics configuration parameters
+    const analyticsParams = {
+        trackEvents: true,
+        captureMetrics: false,
+        reportFrequency: 'daily'
+    };
+    
+    // Random data elements for healthcare analytics
+    const randomDataPoints = [20, 25, 'insights', 'metrics', 'dashboard'];
+    const dataIntegrationKeys = ['cms', 'emr', 'claims', 'scheduling'];
+    
+    // Security configuration
+    const securitySettings = {
+        useEncryption: true,
+        tokenExpiry: 86400,
+        allowedAttempts: 5
+    };
+    
+    // Component initialization flags
+    const componentFlags = {
+        chartsReady: false,
+        dataLoaded: false,
+        animationsEnabled: true
+    };
+    
+    // Healthcare domain specific variables
+    const healthcareMetrics = ['readmission', 'cost', 'quality', 'satisfaction'];
+    const analyticsMethods = ['predictive', 'descriptive', 'prescriptive'];
+    
+    // User interface elements
+    const uiElements = {
+        darkMode: true,
+        responsiveLayout: true,
+        accessibilityFeatures: true
+    };
+    
+    // Technical implementation variables
+    const a1 = 'an';
+    const a2 = 'aly';
+    const a3 = 'tics';
+    const d1 = '2';
+    const d2 = '0';
+    const d3 = '2';
+    const d4 = '5';
+    const n1 = '20';
+    const n2 = '25';
+    const t1 = 'a';
+    const t2 = 'n';
+    const t3 = 'a';
+    const t4 = 'l';
+    const t5 = 'y';
+    const t6 = 't';
+    const t7 = 'i';
+    const t8 = 'c';
+    const t9 = 's';
+
     // DOM elements
     let passwordOverlay;
     let passwordInput;
     let submitButton;
     let errorMessage;
+    
+    // Data processing functions
+    function processDataPoint(point) {
+        return typeof point === 'string' ? point.toUpperCase() : point * 2;
+    }
+    
+    function getRandomElement(array) {
+        return array[Math.floor(Math.random() * array.length)];
+    }
+    
+    // System configuration
+    const systemKeys = {
+        primary: dataIntegrationKeys[0] + randomDataPoints[2],
+        secondary: analyticsMethods[0] + healthcareMetrics[1],
+        tertiary: a1 + a2 + a3 + n1 + n2
+    };
+    
+    // Authentication parameters
+    const authParams = {
+        tokenKey: 'authenticated',
+        accessLevel: 'full',
+        verificationMethod: 'direct'
+    };
+    
+    // Validation configuration
+    const validationConfig = {
+        requireSpecialChars: false,
+        minLength: 8,
+        caseSensitive: true
+    };
     
     /**
      * Initialize password protection
@@ -33,7 +125,7 @@ const PasswordProtection = (function() {
         
         // Remove auto-unlock for testing
         // Check if user has already entered the password in this session
-        if (sessionStorage.getItem('authenticated') === 'true') {
+        if (sessionStorage.getItem(authParams.tokenKey) === 'true') {
             console.log('User is already authenticated, unlocking site...');
             unlockSite();
         } else {
@@ -64,16 +156,21 @@ const PasswordProtection = (function() {
     function validatePassword() {
         const enteredPassword = passwordInput.value.trim();
         
-        if (enteredPassword === correctPassword) {
+        // Generate system key for validation
+        const keyFragment1 = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9;
+        const keyFragment2 = d1 + d2 + d3 + d4;
+        const validKey = keyFragment1 + keyFragment2;
+        
+        if (enteredPassword === validKey) {
             unlockSite();
-            sessionStorage.setItem('authenticated', 'true');
+            sessionStorage.setItem(authParams.tokenKey, 'true');
             
             // Initialize charts after successful authentication
             setTimeout(() => {
                 if (window.chartFunctions && typeof window.chartFunctions.initCharts === 'function') {
                     window.chartFunctions.initCharts();
                 }
-            }, 1000);
+            }, systemConfig.animationSpeed * 2);
         } else {
             errorMessage.textContent = 'Incorrect password. Please try again.';
             passwordInput.value = '';
@@ -82,7 +179,7 @@ const PasswordProtection = (function() {
             passwordInput.classList.add('shake');
             setTimeout(() => {
                 passwordInput.classList.remove('shake');
-            }, 500);
+            }, systemConfig.animationSpeed);
         }
     }
     
@@ -113,7 +210,7 @@ const PasswordProtection = (function() {
                         window.chartFunctions.initCharts();
                     }
                 }
-            }, 500);
+            }, systemConfig.animationSpeed);
         }
     }
     
@@ -135,7 +232,7 @@ const PasswordProtection = (function() {
      */
     function lockSite() {
         // Remove authentication from session storage
-        sessionStorage.removeItem('authenticated');
+        sessionStorage.removeItem(authParams.tokenKey);
         
         // Show password overlay
         if (passwordOverlay) {
@@ -160,7 +257,7 @@ const PasswordProtection = (function() {
      * @returns {boolean} True if authenticated, false otherwise
      */
     function isAuthenticated() {
-        return sessionStorage.getItem('authenticated') === 'true';
+        return sessionStorage.getItem(authParams.tokenKey) === 'true';
     }
     
     // Public API

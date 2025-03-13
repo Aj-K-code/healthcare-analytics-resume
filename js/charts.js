@@ -58,7 +58,6 @@ function initCharts() {
 function createSkillsRadarChart() {
     console.log('Creating skills radar chart...');
     const ctx = document.getElementById('skills-radar-chart');
-    const aboutCtx = document.getElementById('about-skills-radar-chart');
     
     if (!ctx) {
         console.error('Skills radar chart canvas not found!');
@@ -153,22 +152,6 @@ function createSkillsRadarChart() {
     
     // Create new chart
     ctx.chart = new Chart(ctx, radarConfig);
-    
-    // Create the about section chart if it exists
-    if (aboutCtx) {
-        console.log('Creating about section skills radar chart...');
-        // If chart already exists, destroy it
-        if (aboutCtx.chart) {
-            aboutCtx.chart.destroy();
-        }
-        
-        // Create a copy of the config for the about section
-        const aboutRadarConfig = JSON.parse(JSON.stringify(radarConfig));
-        aboutRadarConfig.options.maintainAspectRatio = true;
-        
-        // Create new chart for about section
-        aboutCtx.chart = new Chart(aboutCtx, aboutRadarConfig);
-    }
 }
 
 // Create technical skills chart
