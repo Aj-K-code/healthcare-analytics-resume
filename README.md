@@ -142,12 +142,6 @@ The project includes a module for integrating with CMS data sources. Currently, 
    - Interactive timeline for career progression
    - Customizable dashboard views
 
-## Password Information
-
-The default password for accessing the resume is: `analytics`
-
-This is stored in the `password.js` file and can be changed for security purposes.
-
 ## Browser Compatibility
 
 The website is optimized for modern browsers:
