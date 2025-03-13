@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Healthcare Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .chart-container {
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Healthcare Analytics Dashboard</h1>
+    <p>This is a minimal version of the healthcare analytics dashboard to isolate rendering issues.</p>
+    
+    <h2>Healthcare Metrics</h2>
+    <div class="chart-container">
+        <canvas id="healthcare-metrics-chart"></canvas>
+    </div>
+    
+    <script>
+        console.log('Minimal page loaded');
+        
+        // Static data for the chart
+        const healthcareData = {
+            quality: {
+                overall: 85,
+                readmission: 92,
+                mortality: 88,
+                patientSatisfaction: 90,
+                safety: 95
+            },
+            cost: {
+                overall: 78,
+                inpatient: 82,
+                outpatient: 75,
+                emergency: 80,
+                preventive: 73
+            }
+        };
+        
+        // Create the chart
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, creating chart...');
+            
+            const ctx = document.getElementById('healthcare-metrics-chart');
+            if (!ctx) {
+                console.error('Chart canvas element not found!');
+                return;
+            }
+            
+            console.log('Canvas element found, creating chart...');
+            
+            try {
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Quality', 'Readmission', 'Mortality', 'Patient Satisfaction', 'Safety', 'Cost', 'Inpatient', 'Outpatient', 'Emergency', 'Preventive'],
+                        datasets: [{
+                            label: 'Healthcare Metrics',
+                            data: [
+                                healthcareData.quality.overall,
+                                healthcareData.quality.readmission,
+                                healthcareData.quality.mortality,
+                                healthcareData.quality.patientSatisfaction,
+                                healthcareData.quality.safety,
+                                healthcareData.cost.overall,
+                                healthcareData.cost.inpatient,
+                                healthcareData.cost.outpatient,
+                                healthcareData.cost.emergency,
+                                healthcareData.cost.preventive
+                            ],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(54, 162, 235, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(54, 162, 235, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        },
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+                
+                console.log('Chart created successfully!');
+            } catch (error) {
+                console.error('Error creating chart:', error);
+                document.body.innerHTML += `<p style="color: red;">Error creating chart: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

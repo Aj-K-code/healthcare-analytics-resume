@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajith Kurian | Healthcare Analytics Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="locked">
+    <!-- Password Protection Overlay -->
+    <div id="password-overlay" class="active">
+        <div class="password-container">
+            <div class="logo-container">
+                <i class="fas fa-chart-line"></i>
+                <h2>Healthcare Analytics Portfolio</h2>
+            </div>
+            <div class="password-form">
+                <h3>Enter Access Code</h3>
+                <div class="input-group">
+                    <input type="password" id="password-input" placeholder="Enter password">
+                    <button id="submit-password" class="btn-primary">Access Portfolio</button>
+                </div>
+                <div id="password-error" class="error-message"></div>
+                <div class="hint">
+                    <p><i class="fas fa-info-circle"></i> Hint: Default password is "analytics"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="name">Ajith Kurian</span>
+                    <span class="title">Healthcare Analytics Leader</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#about" class="active">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#dashboard">Analytics</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="close-mobile-nav">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#dashboard">Analytics</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animated-text">Ajith Kurian</h1>
+                    <h2 class="animated-text-delay">Healthcare Analytics Engineer</h2>
+                    <p class="animated-text-delay-2">Transforming healthcare data into strategic insights</p>
+                    <div class="hero-cta animated-text-delay-3">
+                        <a href="#about" class="btn-primary">About Me</a>
+                        <a href="#contact" class="btn-secondary">Contact Me</a>
+                        <a href="#dashboard" class="btn-secondary">View Analytics</a>
+                    </div>
+                </div>
+                <div class="hero-image animated-fade-in">
+                    <div class="profile-image-container">
+                        <div class="profile-image"></div>
+                        <div class="profile-background"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Innovative healthcare analytics leader with a proven record of designing and implementing advanced data solutions that drive executive decision-making. Adept at building comprehensive data pipelines, integrating complex healthcare datasets, and leveraging custom APIs and financial models to optimize operations and improve patient outcomes.</p>
+                    <p>Passionate about transforming raw data into strategic insights in fast-paced healthcare environments.</p>
+                    <div class="about-highlights">
+                        <div class="highlight" data-toggle="modal" data-target="#dataIntegrationModal">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Data Integration</h3>
+                            <p>Expert in integrating diverse healthcare datasets (EMR, Scheduling, HEDIS, SDOH, CMS, HCC)</p>
+                        </div>
+                        <div class="highlight" data-toggle="modal" data-target="#pipelineModal">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Pipeline Development</h3>
+                            <p>Designed comprehensive Power BI data pipelines for actionable insights</p>
+                        </div>
+                        <div class="highlight" data-toggle="modal" data-target="#analyticsModal">
+                            <i class="fas fa-database"></i>
+                            <h3>Advanced Analytics</h3>
+                            <p>Created standardized SQL procedures and advanced DAX metrics for strategic reporting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card" data-toggle="modal" data-target="#experienceModal">
+                        <div class="stat-value" data-value="5">0</div>
+                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-info">Click for details</div>
+                    </div>
+                    <div class="stat-card" data-toggle="modal" data-target="#projectsModal">
+                        <div class="stat-value" data-value="15">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                        <div class="stat-info">Click for details</div>
+                    </div>
+                    <div class="stat-card" data-toggle="modal" data-target="#certificationsModal">
+                        <div class="stat-value" data-value="3">0</div>
+                        <div class="stat-label">Certifications</div>
+                        <div class="stat-info">Click for details</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Healthcare Analytic Engineer</h3>
+                        <h4>Acuitas Health LLC – CDPHP</h4>
+                        <ul>
+                            <li>Co-led the design and implementation of a comprehensive Power BI data pipeline, integrating diverse datasets (EMR, scheduling, HEDIS, SDOH, CMS, HCC) to deliver actionable insights for care transitions and clinical documentation.</li>
+                            <li>Developed standardized SQL procedures, advanced DAX metrics, and semantic models to generate daily strategic reports used by upper management—including the CEO.</li>
+                            <li>Collaborated directly with executive leadership to optimize referral processes, data integration, and operational efficiencies by leveraging custom healthcare APIs and financial data models.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2023 - Mar 2024</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst 3 – Finance</h3>
+                        <h4>Acuitas Health LLC – CDPHP</h4>
+                        <ul>
+                            <li>Directed full-stack development for custom dashboards and applications that informed key financial and scheduling models.</li>
+                            <li>Delivered ad-hoc reporting and analytical solutions using R, Python, SQL, and web technologies to enhance operational performance.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2022 - Feb 2023</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst 2 – Finance</h3>
+                        <h4>Acuitas Health LLC – CDPHP</h4>
+                        <ul>
+                            <li>Managed ETL processes for critical claims datasets, collaborating with clients to deliver tailored data solutions using R and SQL.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2020 - Mar 2022</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst 1 – Finance</h3>
+                        <h4>Acuitas Health LLC – CDPHP</h4>
+                        <ul>
+                            <li>Led data transformation and modeling initiatives, developing RStudio dashboards with integrated SQL inputs and optimized scheduling models.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2018 - Mar 2020</div>
+                    <div class="timeline-content">
+                        <h3>Actuarial Intern</h3>
+                        <h4>New York State Teachers' Retirement System</h4>
+                        <ul>
+                            <li>Supported the actuarial team by performing valuations, calculating pension amounts, and contributing to the Comprehensive Annual Financial Report.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-overview">
+                    <p>As a healthcare analytics professional, I've developed a diverse skill set that combines technical expertise with domain knowledge. My skills span data integration, analytics, visualization, and healthcare-specific knowledge areas.</p>
+                </div>
+                <div class="skills-categories">
+                    <div class="skills-category reveal">
+                        <h3><i class="fas fa-database"></i> Technical Skills</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-level-text">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="98%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Power BI (DAX, Semantic Modeling)</span>
+                                    <span class="skill-level-text">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level-text">Proficient</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">R</span>
+                                    <span class="skill-level-text">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-level-text">Proficient</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-category reveal-right">
+                        <h3><i class="fas fa-heartbeat"></i> Healthcare Domain</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">EMR Data Integration</span>
+                                    <span class="skill-level-text">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HEDIS Measures</span>
+                                    <span class="skill-level-text">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CMS Data Analysis</span>
+                                    <span class="skill-level-text">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HCC Risk Scoring</span>
+                                    <span class="skill-level-text">Proficient</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SDOH Data Analysis</span>
+                                    <span class="skill-level-text">Proficient</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-comparison reveal">
+                    <h3>Skills Comparison</h3>
+                    <div class="chart-container">
+                        <canvas id="about-skills-radar-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education & Certifications</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="education-content">
+                <div class="education-cards">
+                    <div class="education-card reveal">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>MBA – Finance and Business Analytics</h3>
+                            <h4>Siena College</h4>
+                            <div class="education-date">Graduated: January 2022</div>
+                            <div class="education-gpa">GPA: 3.92 – Dean's/President's List</div>
+                        </div>
+                    </div>
+                    <div class="education-card reveal">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>BS in Actuarial Science</h3>
+                            <h4>Siena College</h4>
+                            <div class="education-date">Graduated: January 2019</div>
+                            <div class="education-gpa">GPA: 3.79 – Dean's/President's List</div>
+                        </div>
+                    </div>
+                    <div class="education-card reveal">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>High School Diploma</h3>
+                            <h4>Catholic Central High School</h4>
+                            <div class="education-date">Graduated: 2016</div>
+                            <div class="education-gpa">Graduated in the top 20 with an Advanced Regions Diploma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certifications reveal-right">
+                    <h3>Professional Certifications</h3>
+                    <div class="certifications-list">
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-details">
+                                <h4>Google Data Analytics</h4>
+                                <p>Comprehensive data analytics certification covering the entire data analysis process from collection to visualization.</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-details">
+                                <h4>Bloomberg Terminal/Market Concepts</h4>
+                                <p>Specialized training in financial data analysis and market concepts using Bloomberg Terminal.</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-details">
+                                <h4>Actuarial Exam P/1 (Probability)</h4>
+                                <p>Professional actuarial examination focusing on probability theory and its applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Analytics Dashboard</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="dashboard-intro">
+                <p>This interactive dashboard provides a visual representation of my skills, experience, and impact in healthcare analytics compared to industry averages.</p>
+            </div>
+            <div class="dashboard-tabs">
+                <div class="tab-navigation">
+                    <button class="tab-button active" data-tab="skills">Skills Analysis</button>
+                    <button class="tab-button" data-tab="experience">Experience</button>
+                    <button class="tab-button" data-tab="healthcare">Healthcare Metrics</button>
+                    <button class="tab-button" data-tab="impact">Analytics Impact</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="skills-tab">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card reveal">
+                                <h3>Skills Radar</h3>
+                                <div class="chart-container">
+                                    <canvas id="skills-radar-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card reveal">
+                                <h3>Technical Skills Proficiency</h3>
+                                <div class="chart-container">
+                                    <canvas id="technical-skills-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="experience-tab">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card reveal">
+                                <h3>Experience Comparison</h3>
+                                <div class="chart-container">
+                                    <canvas id="experience-comparison-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card reveal">
+                                <h3>Career Progression</h3>
+                                <div class="chart-container">
+                                    <canvas id="career-progression-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="healthcare-tab">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card reveal">
+                                <h3>Healthcare Domain Expertise</h3>
+                                <div class="chart-container">
+                                    <canvas id="healthcare-metrics-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card reveal">
+                                <h3>CMS Data Integration Experience</h3>
+                                <div class="cms-integration">
+                                    <div class="cms-feature">
+                                        <i class="fas fa-database"></i>
+                                        <h4>Data Sources</h4>
+                                        <ul>
+                                            <li>Medicare Provider Utilization</li>
+                                            <li>Hospital General Information</li>
+                                            <li>Hospital Compare Data</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cms-feature">
+                                        <i class="fas fa-code"></i>
+                                        <h4>API Endpoints</h4>
+                                        <ul>
+                                            <li>Provider Metrics</li>
+                                            <li>Regional Data</li>
+                                            <li>Provider Rankings</li>
+                                            <li>Procedure Costs</li>
+                                            <li>Quality Metrics</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cms-feature">
+                                        <i class="fas fa-cogs"></i>
+                                        <h4>Features</h4>
+                                        <ul>
+                                            <li>Real-time Data Fetching</li>
+                                            <li>Data Caching</li>
+                                            <li>Error Handling</li>
+                                            <li>Data Transformation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="impact-tab">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card reveal">
+                                <h3>Analytics Impact by Area</h3>
+                                <div class="chart-container">
+                                    <canvas id="analytics-impact-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card reveal">
+                                <h3>Healthcare Analytics Projects</h3>
+                                <div class="projects-highlights">
+                                    <div class="project-highlight">
+                                        <h4>Value Insights</h4>
+                                        <ul>
+                                            <li>Cost-quality quadrant analysis</li>
+                                            <li>Provider value matrix</li>
+                                            <li>Volume-adjusted comparisons</li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-highlight">
+                                        <h4>Predictive Analytics</h4>
+                                        <ul>
+                                            <li>Cost trend forecasting</li>
+                                            <li>Volume predictions</li>
+                                            <li>Confidence intervals</li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-highlight">
+                                        <h4>Reporting Solutions</h4>
+                                        <ul>
+                                            <li>Configurable report sections</li>
+                                            <li>PDF export capabilities</li>
+                                            <li>Multiple visualization options</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Healthcare Analytics Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-intro">
+                <p>Below are some of my key healthcare analytics projects that demonstrate my expertise in data integration, visualization, and predictive analytics.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="img/value-insights.jpg" alt="Value Insights Dashboard" onerror="this.src='https://via.placeholder.com/400x250?text=Value+Insights'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Value Insights Platform</h3>
+                        <div class="project-tags">
+                            <span class="tag">Cost Analysis</span>
+                            <span class="tag">Quality Metrics</span>
+                            <span class="tag">Provider Comparison</span>
+                        </div>
+                        <p>Developed an interactive dashboard that analyzes cost-quality relationships, creates provider value matrices, and enables regional filtering for healthcare decision-makers.</p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Cost-quality quadrant analysis</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-table"></i>
+                                <span>Provider value matrix</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-filter"></i>
+                                <span>Regional filtering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="img/predictive-analytics.jpg" alt="Predictive Analytics Dashboard" onerror="this.src='https://via.placeholder.com/400x250?text=Predictive+Analytics'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Engine</h3>
+                        <div class="project-tags">
+                            <span class="tag">Forecasting</span>
+                            <span class="tag">Trend Analysis</span>
+                            <span class="tag">Statistical Modeling</span>
+                        </div>
+                        <p>Created a predictive analytics platform that forecasts healthcare costs and patient volumes with confidence intervals and customizable forecast periods.</p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-chart-area"></i>
+                                <span>Cost trend forecasting</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <span>Volume predictions</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Customizable forecast periods</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="img/cms-integration.jpg" alt="CMS Data Integration" onerror="this.src='https://via.placeholder.com/400x250?text=CMS+Integration'">
+                    </div>
+                    <div class="project-content">
+                        <h3>CMS Data Integration System</h3>
+                        <div class="project-tags">
+                            <span class="tag">API Development</span>
+                            <span class="tag">Data Transformation</span>
+                            <span class="tag">Healthcare Metrics</span>
+                        </div>
+                        <p>Developed a comprehensive system for fetching, processing, and analyzing CMS data from multiple sources, with real-time data fetching and caching capabilities.</p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-database"></i>
+                                <span>Multiple CMS data sources</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-code"></i>
+                                <span>Custom API endpoints</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Performance optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="img/reports-platform.jpg" alt="Healthcare Reports Platform" onerror="this.src='https://via.placeholder.com/400x250?text=Reports+Platform'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Healthcare Reports Platform</h3>
+                        <div class="project-tags">
+                            <span class="tag">Reporting</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">PDF Export</span>
+                        </div>
+                        <p>Built a flexible reporting platform with configurable sections, PDF export capabilities, and multiple data visualization options for healthcare providers.</p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>PDF export functionality</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-sliders-h"></i>
+                                <span>Configurable report sections</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Multiple visualization options</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-intro">
+                <p>Interested in discussing healthcare analytics opportunities or collaborations? Feel free to reach out through any of the channels below.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:ajkurian.public@gmail.com">ajkurian.public@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/ajith-kurian-19b1ba132/" target="_blank">linkedin.com/in/ajith-kurian-19b1ba132</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/Aj-K-code" target="_blank">github.com/Aj-K-code</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Albany, New York</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal-right">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <div class="form-floating">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                                <label for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-floating">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-floating">
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-floating">
+                                <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ajith Kurian</h3>
+                    <p>Healthcare Analytics Professional</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#dashboard">Analytics</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/ajith-kurian-19b1ba132/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Aj-K-code" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ajkurian.public@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ajith Kurian. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Experience Modal -->
+    <div class="modal" id="experienceModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">5 Years of Experience</h3>
+                    <button type="button" class="close-modal" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="experience-list">
+                        <li>
+                            <h4>Senior Healthcare Analytics Engineer</h4>
+                            <p class="company">Albany Medical Center</p>
+                            <p class="period">2022 - Present</p>
+                            <p>Leading data integration and analytics initiatives for healthcare operations and quality improvement.</p>
+                        </li>
+                        <li>
+                            <h4>Healthcare Data Analyst</h4>
+                            <p class="company">Capital Region Health Collaborative</p>
+                            <p class="period">2020 - 2022</p>
+                            <p>Developed comprehensive dashboards for tracking patient outcomes and operational metrics.</p>
+                        </li>
+                        <li>
+                            <h4>Data Integration Specialist</h4>
+                            <p class="company">New York Health Network</p>
+                            <p class="period">2019 - 2020</p>
+                            <p>Implemented data pipelines connecting multiple healthcare systems and databases.</p>
+                        </li>
+                    </ul>
+                    <div class="modal-footer">
+                        <a href="#experience" class="btn-primary" data-dismiss="modal">See Full Experience</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Modal -->
+    <div class="modal" id="projectsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">15 Major Projects Completed</h3>
+                    <button type="button" class="close-modal" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="projects-list">
+                        <li>
+                            <h4>Value Insights Platform</h4>
+                            <p>Cost-quality quadrant analysis with provider value matrix and regional filtering</p>
+                        </li>
+                        <li>
+                            <h4>Predictive Analytics Engine</h4>
+                            <p>Cost trend forecasting with confidence intervals and customizable forecast periods</p>
+                        </li>
+                        <li>
+                            <h4>Healthcare Reports Platform</h4>
+                            <p>Configurable report sections with PDF export and multiple visualization options</p>
+                        </li>
+                        <li>
+                            <h4>CMS Data Integration</h4>
+                            <p>Real-time data fetching with caching and transformation capabilities</p>
+                        </li>
+                        <li>
+                            <h4>Patient Risk Stratification Tool</h4>
+                            <p>ML-based patient risk assessment for targeted interventions</p>
+                        </li>
+                        <li>
+                            <h4>Provider Performance Dashboard</h4>
+                            <p>Comprehensive metrics tracking for provider performance evaluation</p>
+                        </li>
+                        <li>
+                            <h4>Population Health Analytics</h4>
+                            <p>SDOH integration for community health assessment</p>
+                        </li>
+                        <li>
+                            <h4>Revenue Cycle Optimization</h4>
+                            <p>Financial analytics for improving claims processing and reducing denials</p>
+                        </li>
+                        <li>
+                            <h4>Quality Measures Tracker</h4>
+                            <p>HEDIS and STAR ratings monitoring system</p>
+                        </li>
+                        <li>
+                            <h4>Clinical Decision Support</h4>
+                            <p>Evidence-based care recommendation engine</p>
+                        </li>
+                        <li>
+                            <h4>Telehealth Utilization Analytics</h4>
+                            <p>Tracking and optimizing virtual care delivery</p>
+                        </li>
+                        <li>
+                            <h4>ED Throughput Optimization</h4>
+                            <p>Real-time analytics for emergency department flow improvement</p>
+                        </li>
+                        <li>
+                            <h4>Readmission Prediction Model</h4>
+                            <p>ML algorithm for identifying high-risk readmissions</p>
+                        </li>
+                        <li>
+                            <h4>Supply Chain Analytics</h4>
+                            <p>Inventory optimization and cost reduction system</p>
+                        </li>
+                        <li>
+                            <h4>Workforce Planning Tool</h4>
+                            <p>Staffing optimization based on patient volume and acuity</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certifications Modal -->
+    <div class="modal" id="certificationsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Professional Certifications</h3>
+                    <button type="button" class="close-modal" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="certifications-list">
+                        <li>
+                            <h4>Microsoft Certified: Power BI Data Analyst Associate</h4>
+                            <p class="cert-date">Issued: January 2022</p>
+                            <p>Expertise in designing and building scalable data models, cleaning and transforming data, and creating meaningful visualizations.</p>
+                        </li>
+                        <li>
+                            <h4>Healthcare Data Analytics Certification (HDAC)</h4>
+                            <p class="cert-date">Issued: March 2021</p>
+                            <p>Specialized training in healthcare data analysis, including clinical metrics, quality measures, and regulatory compliance.</p>
+                        </li>
+                        <li>
+                            <h4>AWS Certified Data Analytics - Specialty</h4>
+                            <p class="cert-date">Issued: September 2020</p>
+                            <p>Advanced skills in designing, building, securing, and maintaining analytics solutions on AWS.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Integration Modal -->
+    <div class="modal" id="dataIntegrationModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Healthcare Data Integration Expertise</h3>
+                    <button type="button" class="close-modal" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="integration-details">
+                        <h4>Data Sources Integrated</h4>
+                        <ul class="feature-list">
+                            <li><strong>Electronic Medical Records (EMR):</strong> Clinical data integration from Epic, Cerner, and Meditech systems</li>
+                            <li><strong>Scheduling Systems:</strong> Appointment and resource utilization data from multiple platforms</li>
+                            <li><strong>HEDIS Measures:</strong> Quality metrics for health plan performance evaluation</li>
+                            <li><strong>Social Determinants of Health (SDOH):</strong> Community and demographic factors affecting health outcomes</li>
+                            <li><strong>Centers for Medicare & Medicaid Services (CMS):</strong> Medicare Provider Utilization, Hospital General Information, and Hospital Compare Data</li>
+                            <li><strong>Hierarchical Condition Categories (HCC):</strong> Risk adjustment models for patient population analysis</li>
+                        </ul>
+                        
+                        <h4>Integration Technologies</h4>
+                        <ul class="feature-list">
+                            <li><strong>ETL Pipelines:</strong> Automated data extraction, transformation, and loading processes</li>
+                            <li><strong>API Development:</strong> Custom interfaces for real-time data exchange</li>
+                            <li><strong>Data Warehousing:</strong> Centralized repositories for healthcare analytics</li>
+                            <li><strong>Real-time Processing:</strong> Stream processing for immediate insights</li>
+                        </ul>
+                        
+                        <h4>Recent Project: CMS Data Integration</h4>
+                        <p>Implemented comprehensive CMS data integration with real-time fetching, caching, and transformation capabilities. The system processes Medicare Provider Utilization data, Hospital General Information, and Hospital Compare Data to provide actionable insights for healthcare providers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pipeline Development Modal -->
+    <div class="modal" id="pipelineModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Data Pipeline Development</h3>
+                    <button type="button" class="close-modal" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="pipeline-details">
+                        <h4>Pipeline Architecture</h4>
+                        <ul class="feature-list">
+                            <li><strong>Power BI Data Models:</strong> Optimized star schema designs for healthcare analytics</li>
+                            <li><strong>Incremental Refresh:</strong> Efficient data loading patterns for large healthcare datasets</li>
+                            <li><strong>Data Transformation:</strong> Complex business logic implementation in Power Query M</li>
+                            <li><strong>Dataflow Management:</strong> Reusable transformation components for enterprise-scale solutions</li>
+                        </ul>
+                        
+                        <h4>Pipeline Components</h4>
+                        <ul class="feature-list">
+                            <li><strong>Data Validation:</strong> Automated quality checks and data profiling</li>
+                            <li><strong>Error Handling:</strong> Robust exception management and logging</li>
+                            <li><strong>Performance Optimization:</strong> Query folding and execution plan improvements</li>
+                            <li><strong>Security Implementation:</strong> Row-level security and data protection measures</li>
+                        </ul>
+                        
+                        <h4>Featured Project: Value Insights Platform</h4>
+                        <p>Developed a comprehensive data pipeline for the Value Insights Platform, enabling cost-quality quadrant analysis with provider value matrix and regional filtering capabilities. The pipeline integrates multiple data sources and performs complex calculations to deliver actionable insights for healthcare executives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Analytics Modal -->
+    <div class="modal" id="analyticsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Advanced Analytics Capabilities</h3>
+                    <button type="button" class="close-modal" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="analytics-details">
+                        <h4>SQL Expertise</h4>
+                        <ul class="feature-list">
+                            <li><strong>Stored Procedures:</strong> Standardized data processing routines for consistency</li>
+                            <li><strong>Complex Queries:</strong> Advanced joins, CTEs, and window functions for healthcare analytics</li>
+                            <li><strong>Query Optimization:</strong> Performance tuning and execution plan analysis</li>
+                            <li><strong>Temporal Data Analysis:</strong> Point-in-time analytics for healthcare trend identification</li>
+                        </ul>
+                        
+                        <h4>DAX Metrics Development</h4>
+                        <ul class="feature-list">
+                            <li><strong>KPI Formulation:</strong> Complex calculations for healthcare performance indicators</li>
+                            <li><strong>Time Intelligence:</strong> Period-over-period comparisons and trending analysis</li>
+                            <li><strong>Statistical Measures:</strong> Variance, correlation, and regression analytics</li>
+                            <li><strong>Hierarchical Calculations:</strong> Multi-level aggregations for organizational reporting</li>
+                        </ul>
+                        
+                        <h4>Featured Project: Predictive Analytics Engine</h4>
+                        <p>Implemented a predictive analytics engine featuring cost trend forecasting with confidence intervals, volume predictions, and customizable forecast periods. The system leverages advanced DAX metrics and SQL procedures to process historical data and generate accurate predictions for healthcare planning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="debug.js"></script>
+    <script src="js/cms_data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/password.js"></script>
+</body>
+</html>

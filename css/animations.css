@@ -1,0 +1,413 @@
+/* Animations CSS */
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Base animation classes */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Prevent unwanted scrolling during animations */
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body.locked {
+    overflow: hidden;
+}
+
+/* Specific animation classes */
+.animated-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.animated-slide-up {
+    opacity: 0;
+    animation: slideInUp 1s ease forwards;
+}
+
+.animated-slide-left {
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.animated-slide-right {
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+}
+
+.animated-scale-in {
+    opacity: 0;
+    animation: scaleIn 1s ease forwards;
+}
+
+.animated-pulse {
+    animation: pulse 2s ease infinite;
+}
+
+.animated-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animated-rotate {
+    animation: rotate 10s linear infinite;
+}
+
+/* Delayed animations */
+.animated-text {
+    opacity: 0;
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.animated-text-delay {
+    opacity: 0;
+    animation: slideInUp 0.8s ease 0.2s forwards;
+}
+
+.animated-text-delay-2 {
+    opacity: 0;
+    animation: slideInUp 0.8s ease 0.4s forwards;
+}
+
+.animated-text-delay-3 {
+    opacity: 0;
+    animation: slideInUp 0.8s ease 0.6s forwards;
+}
+
+/* Typewriter effect */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    width: 0;
+    animation: typewriter 2.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.5) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+/* Scroll animations - these will be triggered by JavaScript */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered animations for list items */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.stagger-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay classes */
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
+
+.delay-5 {
+    transition-delay: 0.5s;
+}
+
+/* Animated progress bars */
+.progress-bar {
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.progress-bar.animate {
+    width: var(--progress-width);
+}
+
+/* Animated counters */
+.counter {
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+/* Hover animations */
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate {
+    transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+/* Animated background gradient */
+.animated-gradient {
+    background: linear-gradient(-45deg, 
+        var(--primary-color), 
+        var(--primary-dark), 
+        var(--secondary-color), 
+        var(--secondary-dark));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animated icons */
+.icon-pulse {
+    animation: pulse 2s infinite;
+}
+
+.icon-spin {
+    animation: rotate 3s linear infinite;
+}
+
+.icon-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animated borders */
+.border-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.border-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--secondary-color), 
+        var(--primary-light), 
+        var(--secondary-light));
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradient 10s ease infinite;
+    border-radius: inherit;
+}
+
+/* Animated skill bars */
+.skill-progress {
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.skill-progress.animate {
+    width: var(--skill-level);
+}
