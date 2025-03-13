@@ -10,8 +10,8 @@ console.log('Loading Password Protection module...');
 
 // Password Protection Module
 const PasswordProtection = (function() {
-    // Default password - in a real application this would be more secure
-    const correctPassword = 'analytics';
+    // Password for accessing protected content
+    const correctPassword = 'analytics2025';
     
     // DOM elements
     let passwordOverlay;
