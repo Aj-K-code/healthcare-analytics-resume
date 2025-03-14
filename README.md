@@ -1,14 +1,17 @@
-# Healthcare Analytics Interactive Resume
+# 🏥 Healthcare Analytics Resume 📊
+
+✨ **Explore My Interactive Resume** ✨
+
+[![Click here to view my resume](https://img.shields.io/badge/📄_Click_Here_to_View-My_Resume-00b4ff?style=for-the-badge&logoColor=white&color=00b4ff&labelColor=0088cc)](https://aj-k-code.github.io/healthcare-analytics-resume/index.html)
+
+📧 **Contact AJ for access to protected features** 📧
+
+---
 
 ## Overview
 This project is an advanced, interactive, and password-protected HTML resume designed to showcase expertise in healthcare analytics. The website features a modern design with engaging animations, interactive data visualizations, and comprehensive sections highlighting skills, experience, education, projects, and contact information.
 
 ## Features
-
-### Password Protection
-- Secure access to resume content with password authentication
-- Session management for persistent access
-- Animated transitions between password screen and content
 
 ### Interactive Dashboard
 - Skills visualization with radar and bar charts
@@ -16,13 +19,6 @@ This project is an advanced, interactive, and password-protected HTML resume des
 - Healthcare metrics visualization
 - Analytics impact assessment
 - Career progression tracking
-
-### CMS Data Integration
-- Integration with Centers for Medicare & Medicaid Services (CMS) data
-- Real-time data fetching and processing
-- Data visualization of healthcare metrics
-- Provider performance analytics
-- Regional data comparisons
 
 ### Modern UI/UX
 - Responsive design for all device sizes
@@ -40,6 +36,11 @@ This project is an advanced, interactive, and password-protected HTML resume des
 - Project showcase with filtering
 - Contact form with validation
 
+### Password Protection
+- Secure access to resume content with password authentication
+- Session management for persistent access
+- Animated transitions between password screen and content
+
 ## Technical Implementation
 
 ### Frontend Technologies
@@ -50,7 +51,6 @@ This project is an advanced, interactive, and password-protected HTML resume des
 - Font Awesome for icons
 
 ### Data Integration
-- Mock CMS data integration (expandable to real API)
 - Data processing and transformation
 - Visualization preparation
 - Error handling and fallbacks
@@ -75,7 +75,6 @@ healthcare-analytics-resume/
 │   ├── password.js         # Password protection module
 │   ├── charts.js           # Chart creation and management
 │   ├── animations.js       # Animation control
-│   └── cms_data.js         # CMS data integration
 ├── assets/
 │   ├── images/             # Image resources
 │   └── fonts/              # Custom fonts
@@ -98,49 +97,6 @@ healthcare-analytics-resume/
 4. For development:
    - Make changes to HTML, CSS, or JavaScript files
    - Refresh the browser to see changes
-
-## CMS Data Integration
-
-The project includes a module for integrating with CMS data sources. Currently, it uses mock data that simulates real CMS metrics, but it can be expanded to connect with actual CMS APIs:
-
-### Available Data Points
-- Provider metrics (quality, cost, utilization)
-- Regional comparisons
-- Provider rankings
-- Procedure costs
-- Historical trends
-- Quality metrics
-
-### Integration Points
-- Value Insights
-- Predictive Analytics
-- Healthcare Metrics Dashboard
-- Analytics Impact Assessment
-
-## Future Enhancements
-
-1. **Real CMS API Integration**
-   - Connect to actual CMS data sources
-   - Implement authentication for API access
-   - Add data validation and transformation
-
-2. **Advanced Analytics Features**
-   - Predictive modeling for healthcare trends
-   - Cost-quality quadrant analysis
-   - Provider value matrix
-   - Volume-adjusted comparisons
-
-3. **Reporting Capabilities**
-   - Configurable report sections
-   - PDF export functionality
-   - Date range selection
-   - Provider and procedure filtering
-
-4. **Enhanced Interactivity**
-   - Additional filtering options
-   - Drill-down capabilities for metrics
-   - Interactive timeline for career progression
-   - Customizable dashboard views
 
 ## Browser Compatibility
 

@@ -960,6 +960,110 @@ section {
     }
 }
 
+/* Education Section Styles */
+.education-section {
+    background-color: var(--light-color);
+}
+
+.education-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.education-card {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.education-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.education-icon i {
+    font-size: var(--font-size-xl);
+}
+
+.education-header h3 {
+    margin-bottom: 0;
+}
+
+.education-date, .education-gpa {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Certification Styles */
+.certifications {
+    padding: var(--spacing-lg);
+}
+
+.certification-item {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.certification-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.certification-details h4 {
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+}
+
+.certification-details h4 i {
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    margin-right: var(--spacing-sm);
+}
+
+.certification-details p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+    margin-left: calc(var(--font-size-lg) + var(--spacing-sm));
+}
+
+/* Skills Categories Spacing */
+.skills-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
+}
+
 /* Media Queries */
 @media (max-width: 992px) {
     .hero-content {
