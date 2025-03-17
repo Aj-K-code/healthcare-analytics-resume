@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bypass Password - Healthcare Analytics Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            margin: 20px 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn-secondary {
+            background-color: #95a5a6;
+        }
+        .btn-secondary:hover {
+            background-color: #7f8c8d;
+        }
+        .password-display {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Healthcare Analytics Portfolio</h1>
+        <p>This page allows you to bypass the password protection or view the correct password for the main portfolio page.</p>
+        
+        <div class="password-display">
+            Password: <span id="password-value">analytics2025</span>
+        </div>
+        
+        <p>You can either use this password on the main page or click the button below to access the portfolio directly.</p>
+        
+        <a href="index.html" class="btn">Go to Login Page</a>
+        <a href="#" id="bypass-btn" class="btn">Bypass Password Protection</a>
+        <a href="#" id="show-console-btn" class="btn btn-secondary">Show Console</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up the bypass button
+            document.getElementById('bypass-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Set the authenticated flag in session storage
+                sessionStorage.setItem('authenticated', 'true');
+                
+                // Redirect to the main page
+                window.location.href = 'index.html';
+            });
+            
+            // Set up the show console button
+            document.getElementById('show-console-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Open the console
+                console.log('Console opened via button click');
+                alert('Please press F12 to open the developer console');
+            });
+        });
+    </script>
+</body>
+</html>

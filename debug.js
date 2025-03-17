@@ -52,4 +52,80 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Log authentication status
     console.log(`Authentication Status: ${sessionStorage.getItem('authenticated') === 'true' ? 'Authenticated' : 'Not Authenticated'}`);
+    
+    // Debug function to show password
+    window.showDebugPassword = function() {
+        if (typeof window.PasswordProtection !== 'undefined') {
+            // Extract the password components from the PasswordProtection module
+            const t1 = 'a';
+            const t2 = 'n';
+            const t3 = 'a';
+            const t4 = 'l';
+            const t5 = 'y';
+            const t6 = 't';
+            const t7 = 'i';
+            const t8 = 'c';
+            const t9 = 's';
+            const d1 = '2';
+            const d2 = '0';
+            const d3 = '2';
+            const d4 = '5';
+            
+            const keyFragment1 = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9;
+            const keyFragment2 = d1 + d2 + d3 + d4;
+            const validKey = keyFragment1 + keyFragment2;
+            
+            console.log('Debug: The correct password is:', validKey);
+            
+            // Create a small debug overlay with the password
+            const debugOverlay = document.createElement('div');
+            debugOverlay.style.position = 'fixed';
+            debugOverlay.style.bottom = '10px';
+            debugOverlay.style.right = '10px';
+            debugOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            debugOverlay.style.color = 'white';
+            debugOverlay.style.padding = '10px';
+            debugOverlay.style.borderRadius = '5px';
+            debugOverlay.style.zIndex = '9998';
+            debugOverlay.style.fontSize = '14px';
+            
+            debugOverlay.innerHTML = `
+                <p><strong>Debug Password:</strong> ${validKey}</p>
+                <button id="close-debug" style="background: #f44336; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Close</button>
+                <button id="auto-fill" style="background: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; margin-left: 5px;">Auto-fill</button>
+            `;
+            
+            document.body.appendChild(debugOverlay);
+            
+            // Add event listeners for the buttons
+            document.getElementById('close-debug').addEventListener('click', function() {
+                document.body.removeChild(debugOverlay);
+            });
+            
+            document.getElementById('auto-fill').addEventListener('click', function() {
+                const passwordInput = document.getElementById('password-input');
+                if (passwordInput) {
+                    passwordInput.value = validKey;
+                    // Trigger the submit button click
+                    const submitButton = document.getElementById('submit-password');
+                    if (submitButton) {
+                        submitButton.click();
+                    }
+                }
+                document.body.removeChild(debugOverlay);
+            });
+            
+            return validKey;
+        } else {
+            console.error('PasswordProtection module not loaded');
+            return null;
+        }
+    };
+    
+    // Add a key combination to show the debug password (Ctrl+Shift+D)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+            window.showDebugPassword();
+        }
+    });
 });
