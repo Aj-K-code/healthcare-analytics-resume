@@ -154,6 +154,7 @@ const PasswordProtection = (function() {
      * Validate the entered password
      */
     function validatePassword() {
+        console.log('Validating password...');
         const enteredPassword = passwordInput.value.trim();
         
         // Generate system key for validation
@@ -161,17 +162,24 @@ const PasswordProtection = (function() {
         const keyFragment2 = d1 + d2 + d3 + d4;
         const validKey = keyFragment1 + keyFragment2;
         
+        console.log('Valid key pattern generated');
+        
         if (enteredPassword === validKey) {
+            console.log('Password validated successfully!');
             unlockSite();
             sessionStorage.setItem(authParams.tokenKey, 'true');
             
             // Initialize charts after successful authentication
             setTimeout(() => {
                 if (window.chartFunctions && typeof window.chartFunctions.initCharts === 'function') {
+                    console.log('Initializing charts after authentication');
                     window.chartFunctions.initCharts();
+                } else {
+                    console.warn('chartFunctions not available for initialization');
                 }
             }, systemConfig.animationSpeed * 2);
         } else {
+            console.log('Invalid password entered');
             errorMessage.textContent = 'Incorrect password. Please try again.';
             passwordInput.value = '';
             
@@ -187,11 +195,14 @@ const PasswordProtection = (function() {
      * Unlock the site after successful password entry
      */
     function unlockSite() {
+        console.log('Unlocking site...');
         if (passwordOverlay) {
             passwordOverlay.classList.add('fade-out');
             
             setTimeout(() => {
+                console.log('Removing password overlay');
                 passwordOverlay.style.display = 'none';
+                passwordOverlay.classList.remove('active');
                 document.body.classList.remove('locked');
                 
                 // Trigger animations for the main content
@@ -199,18 +210,23 @@ const PasswordProtection = (function() {
                 
                 // Initialize charts with data from HealthcareAnalyticsData
                 if (window.HealthcareAnalyticsData) {
-                    console.log('Healthcare Analytics data loaded successfully');
-                    // Initialize charts with the data
-                    if (window.chartFunctions && typeof window.chartFunctions.initCharts === 'function') {
-                        window.chartFunctions.initCharts();
+                    console.log('HealthcareAnalyticsData found, initializing visualizations');
+                    try {
+                        const data = window.HealthcareAnalyticsData.getVisualizationData();
+                        
+                        // Initialize charts with the data
+                        if (window.chartFunctions && typeof window.chartFunctions.initChartsWithData === 'function') {
+                            window.chartFunctions.initChartsWithData(data);
+                        }
+                    } catch (error) {
+                        console.error('Error initializing charts with data:', error);
                     }
                 } else {
-                    // Initialize charts with default data if HealthcareAnalyticsData is not available
-                    if (window.chartFunctions && typeof window.chartFunctions.initCharts === 'function') {
-                        window.chartFunctions.initCharts();
-                    }
+                    console.warn('HealthcareAnalyticsData not found');
                 }
             }, systemConfig.animationSpeed);
+        } else {
+            console.error('Password overlay element not found!');
         }
     }
     
@@ -270,12 +286,19 @@ const PasswordProtection = (function() {
     };
 })();
 
-// Initialize password protection when DOM is loaded
+// Initialize the password protection when the script loads
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing password protection...');
     PasswordProtection.init();
 });
 
-// Export the module
+// Also try to initialize immediately in case the DOM is already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    console.log('Document already loaded, initializing password protection immediately...');
+    PasswordProtection.init();
+}
+
+// Export for use in other modules
 window.PasswordProtection = PasswordProtection;
 
 // Add shake animation for incorrect password
